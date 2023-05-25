@@ -1,3 +1,4 @@
+package Server;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class Servidor {
             while (true) {
                 Socket ns = s.accept();
                 Socket ns2 = s.accept();
-                exec.execute(new Teste(ns,ns2));
+                exec.execute(new Controle(ns,ns2));
             }
         }catch (IOException e){
 

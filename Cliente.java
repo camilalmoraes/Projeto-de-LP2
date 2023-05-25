@@ -13,13 +13,11 @@ public class Cliente{
                 
         out.writeUTF("Entrar na Fila");
         vez = in.readInt();
-        System.out.printf("Você entrou no jogo, como jogador %d",vez);
+        System.out.printf("Você entrou no jogo, como jogador %d",vez+1);
+     
         
-        do{
-            Map conteudo = in.read();
-            
-        }while(in.readUTF() == "End Game");
-
+        // new Jogo(in,out,vez);
+        
         in.close();
         out.close();
         s.close();

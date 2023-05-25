@@ -1,15 +1,14 @@
 import java.util.Scanner;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.util.Map;
 
 public class Jogo{
-    public static int rodada_atual;
-    public static Jogador[] jogador = new Jogador[2];
-    public static Scanner sc = new Scanner(System.in);
-    public static void main(String[] argv){
-        rodada_atual = 1;
+    public int rodada_atual = 1;
+    public Jogador jogador,jogador_oponente;
+    public Scanner sc = new Scanner(System.in);
+    public Jogo(DataInputStream in,DataOutputStream out, int vez){
         criar_jogadores();
-        Jogador jogador_atual = jogador[0];
-        Jogador jogador_oponente = jogador[1];
         while(true){
             System.out.print("\n\nRodada: "+rodada_atual+"");
             System.out.print("\nVez de "+jogador_atual.nome);
@@ -41,24 +40,23 @@ public class Jogo{
                     jogador_oponente = jogador[1];
                 }
             }
-            }
-    }
-
-    public static void criar_jogadores(){
-        for(int i = 0; i < 2; i++){
-            System.out.print("Diga o nome do Jogador "+(i+1)+" : ");
-            String nome_jogador = sc.nextLine();
-            System.out.print("\nDiga o seu personagem - \n1 - Elfo\n2 - Anão\n3 - Troll\n");
-            String tipo_personagem = sc.nextLine();
-            jogador[i] = new Jogador(nome_jogador,tipo_personagem);
-            System.out.println("Nome do Jogador "+(i+1)+": " + jogador[i].nome + "\nPersonagem do Jogador "+(i+1)+": " + jogador[i].personagem.tipo);
-            System.out.print("\nDiga sua arma - \n1 - Espada\n2 - Cajado\n3 - Arco\n");
-            String tipo_arma = sc.nextLine();
-            jogador[i].personagem.set_arma(tipo_arma);
         }
     }
 
-    public static Map<String,Integer> escolher_golpe(Jogador jogador){
+    public void criar_jogadores(){
+        System.out.print("Diga o nome do Jogador: ");
+        String nome_jogador = sc.nextLine();
+        System.out.print("\nDiga o seu personagem - \n1 - Elfo\n2 - Anão\n3 - Troll\n");
+        String tipo_personagem = sc.nextLine();
+        jogador = new Jogador(nome_jogador,tipo_personagem);
+        
+        System.out.println("Nome do Jogador: " + jogador.nome + "\nPersonagem do Jogador: " + jogador.personagem.tipo);
+        System.out.print("\nDiga sua arma - \n1 - Espada\n2 - Cajado\n3 - Arco\n");
+        String tipo_arma = sc.nextLine();
+        jogador.personagem.set_arma(tipo_arma);
+    }
+
+    public Map<String,Integer> escolher_golpe(Jogador jogador){
         int comando = 0;
         while (true){
             System.out.print("\n\nEscolha o golpe - \n1 - "+ jogador.personagem.arma.ataques.keySet().toArray()[0] +
@@ -76,7 +74,7 @@ public class Jogo{
         return jogador.personagem.arma.ataques.get(jogador.personagem.arma.ataques.keySet().toArray()[(comando-1)]);
     }
 
-    public static void calcular_dano(Map<String, Integer> golpe, Jogador jogador_atual,Jogador jogador_oponente){
+    public void calcular_dano(Map<String, Integer> golpe, Jogador jogador_atual,Jogador jogador_oponente){
         if(golpe.get("Dano") > 0){
             double dano = ((jogador_atual.personagem.ataque * 0.33) * golpe.get("Dano")) / jogador_oponente.personagem.armadura;
             jogador_oponente.personagem.vida -= dano;
