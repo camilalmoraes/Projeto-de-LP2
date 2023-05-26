@@ -1,3 +1,4 @@
+package Client;
 public class Arco extends Arma{
     public Arco(){
         super.set_ataques("Tiro Rápido",50,0,0,0);

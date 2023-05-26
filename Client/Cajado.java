@@ -1,3 +1,4 @@
+package Client;
 public class Cajado extends Arma{
     public Cajado(){
         super.set_ataques("Bola de Fogo",150,0,0,0);

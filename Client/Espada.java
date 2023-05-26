@@ -1,3 +1,4 @@
+package Client;
 public class Espada extends Arma{
     public Espada(){
         super.set_ataques("Corte Simples",100,0,0,0);

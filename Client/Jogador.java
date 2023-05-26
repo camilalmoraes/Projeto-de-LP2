@@ -1,3 +1,4 @@
+package Client;
 public class Jogador{
     public String nome;
     public Personagem personagem;

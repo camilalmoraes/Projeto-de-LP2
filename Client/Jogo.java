@@ -1,3 +1,4 @@
+package Client;
 import java.util.Scanner;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -5,9 +6,10 @@ import java.util.Map;
 
 public class Jogo{
     public int rodada_atual = 1;
-    public Jogador jogador,jogador_oponente;
+    public Jogador jogador1,jogador2;
     public Scanner sc = new Scanner(System.in);
-    public Jogo(DataInputStream in,DataOutputStream out, int vez){
+
+    public void startGame(DataInputStream in,DataOutputStream out, int vez){
         criar_jogadores();
         while(true){
             System.out.print("\n\nRodada: "+rodada_atual+"");

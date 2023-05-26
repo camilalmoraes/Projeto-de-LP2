@@ -1,3 +1,4 @@
+package Client;
 public class Troll extends Personagem{
     public Troll(){
         tipo = "Troll";

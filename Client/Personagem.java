@@ -1,3 +1,4 @@
+package Client;
 public class Personagem {
     public String tipo;
     public String tipo_arma;

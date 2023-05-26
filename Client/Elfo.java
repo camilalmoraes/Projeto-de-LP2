@@ -1,3 +1,4 @@
+package Client;
 public class Elfo extends Personagem{
     public Elfo(){
         tipo = "Elfo";
