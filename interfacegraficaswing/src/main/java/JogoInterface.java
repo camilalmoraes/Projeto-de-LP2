@@ -25,7 +25,7 @@ public class JogoInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        telajogo = new javax.swing.JPanel();
         ataque1 = new javax.swing.JButton();
         ataque2 = new javax.swing.JButton();
         ataque3 = new javax.swing.JButton();
@@ -46,11 +46,11 @@ public class JogoInterface extends javax.swing.JFrame {
 
         ataque4.setText("jButton4");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout telajogoLayout = new javax.swing.GroupLayout(telajogo);
+        telajogo.setLayout(telajogoLayout);
+        telajogoLayout.setHorizontalGroup(
+            telajogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(telajogoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(ataque1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
@@ -61,11 +61,11 @@ public class JogoInterface extends javax.swing.JFrame {
                 .addComponent(ataque4)
                 .addGap(17, 17, 17))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        telajogoLayout.setVerticalGroup(
+            telajogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, telajogoLayout.createSequentialGroup()
                 .addContainerGap(236, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(telajogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ataque1)
                     .addComponent(ataque2)
                     .addComponent(ataque3)
@@ -77,12 +77,12 @@ public class JogoInterface extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(telajogo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(telajogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -133,6 +133,6 @@ public class JogoInterface extends javax.swing.JFrame {
     private javax.swing.JButton ataque2;
     private javax.swing.JButton ataque3;
     private javax.swing.JButton ataque4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel telajogo;
     // End of variables declaration//GEN-END:variables
 }
