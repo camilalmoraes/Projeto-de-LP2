@@ -64,7 +64,7 @@ public class JogoInterface extends javax.swing.JFrame {
         telajogoLayout.setVerticalGroup(
             telajogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, telajogoLayout.createSequentialGroup()
-                .addContainerGap(236, Short.MAX_VALUE)
+                .addContainerGap(233, Short.MAX_VALUE)
                 .addGroup(telajogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ataque1)
                     .addComponent(ataque2)
