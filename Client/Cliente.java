@@ -4,15 +4,18 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+
 import common.Mensagem;
 
 public class Cliente{
     private ObjectInputStream in;
     private ObjectOutputStream out;
     private Socket socket;
-    Protocolo protocolo;
-    Jogo jogo;
-    Integer ordem;
+    public Protocolo protocolo;
+    public Jogo jogo;
+    public Integer ordem;
     
     public Cliente() throws IOException{
         this.socket = new Socket("localhost",4444);
@@ -23,7 +26,7 @@ public class Cliente{
 
     public Mensagem receberMensagem() throws ClassNotFoundException, IOException{
         Mensagem mensagem = (Mensagem)in.readObject();
-        System.out.println("\nMensagem Recebida!");
+        // System.out.println("\nMensagem Recebida!");
         return mensagem;
     }
 
@@ -56,19 +59,32 @@ public class Cliente{
 
         while(this.jogo.jogador_oponente == null){};
 
-        do{
-            
-        }while(jogo.endgame == false);
+        while(jogo.endgame == false){};
     }
 
     public class Protocolo{
-        public void decidir(String comando,Object conteudo){
+        public void decidir(String comando,Object conteudo) throws IOException{
             switch (comando) {
+            case "Iniciar Rodada":
+                String jg = (int)conteudo == ordem ? jogo.jogador.nome: jogo.jogador_oponente.nome;
+                System.out.println("\n\nRodada "+jogo.rodada_atual+"\nVez de "+jg);
+                System.out.println("\nSua vida: "+jogo.jogador.personagem.vida+"\nVida do oponente: "+jogo.jogador_oponente.personagem.vida);
+                break;
             case "Adicionar Oponente":
                     adicionarOponente((String[])conteudo);
                     break;
             case "Ordem no Jogo":
                     ordem = (int)conteudo;
+                    break;
+            case "Escolher Golpe":
+                    Map<String, Integer> golpe = jogo.escolher_golpe(jogo.jogador);
+                    jogo.calcular_dano(golpe, jogo.jogador, jogo.jogador_oponente);
+                    sendMessage("Golpe", golpe);
+                    break;
+            case "Calcular Dano":
+                    @SuppressWarnings (value="unchecked")
+                    Map<String,Integer> golp = (HashMap<String,Integer>)conteudo;
+                    jogo.calcular_dano(golp, jogo.jogador_oponente, jogo.jogador);
                     break;
             default:
                 break;

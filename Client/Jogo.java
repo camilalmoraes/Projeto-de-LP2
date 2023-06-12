@@ -6,17 +6,10 @@ public class Jogo{
     public int rodada_atual = 1;
     public Jogador jogador,jogador_oponente;
     public Scanner sc = new Scanner(System.in);
+    public Boolean endgame = false;
 
     // public void startGame(){
     //     while(true){
-    //         System.out.print("\n\nRodada: "+rodada_atual+"");
-    //         System.out.print("\nVida de "+jogador_atual.nome": "+jogador_atual.personagem.vida);
-    //         System.out.print("\nVida de "+jogador_oponente.nome": "+jogador_atual.personagem.vida);
-    //         System.out.print("\nVez de "+jogador_atual.nome\n);
-
-    //         Map<String, Integer> golpe = escolher_golpe(jogador_atual);   
-    //         calcular_dano(golpe,jogador_atual,jogador_oponente);
-
     //         if(golpe.get("Atordoar") > 0){
     //             jogador_oponente.personagem.stuned = golpe.get("Atordoar");
     //         }
@@ -87,12 +80,12 @@ public class Jogo{
             double dano = ((jogador_atual.personagem.ataque * 0.33) * golpe.get("Dano")) / jogador_oponente.personagem.armadura;
             jogador_oponente.personagem.vida -= dano;
 
-            System.out.print("\nVida de "+jogador_oponente.nome+": "+jogador_oponente.personagem.vida+":");
+            System.out.println("\nVida de "+jogador_oponente.nome+": "+jogador_oponente.personagem.vida);
         }
 
         if (golpe.get("Cura") > 0){
             jogador_atual.personagem.vida += golpe.get("Cura");
-            System.out.print("\nCura realizada, vida atual: "+jogador_atual.personagem.vida);
+            System.out.println("\nCura realizada, vida atual: "+jogador_atual.personagem.vida);
         }
     }
 }

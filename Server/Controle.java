@@ -10,6 +10,7 @@ public class Controle implements Runnable{
     private Socket[] sockets;
     private ObjectInputStream[] in = new ObjectInputStream[2];
     private ObjectOutputStream[] out = new ObjectOutputStream[2]; 
+    public Integer vez = 0;
 
     public Controle(Socket[] sock) throws IOException{
         this.sockets = sock;
@@ -48,8 +49,14 @@ public class Controle implements Runnable{
         }
     }
 
+    public int getInverso(int num){
+        int num2 = (num == 0) ? 1: 0; 
+        return num2;
+    }
+
     @Override
     public void run(){
+        
         try {
             //Enviando ordem para o cliente
             sendMessage(0, "Ordem no Jogo", 0);
@@ -60,6 +67,20 @@ public class Controle implements Runnable{
             Thread thread2 = new Thread(receberMensagem(1));
             thread1.start();
             thread2.start();
+
+            while(true){
+                sendMessage(vez, "Iniciar Rodada", 0);
+                sendMessage(vez, "Iniciar Rodada", 1);
+
+                sendMessage(0, "Escolher Golpe", vez);
+                Mensagem mensagem;
+                do{
+                    mensagem = (Mensagem)in[vez].readObject();
+                    sendMessage(mensagem.conteudo, "Calcular Dano", getInverso(vez));
+                    vez = getInverso(vez);
+                }
+                while(mensagem.titulo == "Golpe");
+            }
 
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
