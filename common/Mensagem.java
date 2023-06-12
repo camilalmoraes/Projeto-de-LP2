@@ -3,11 +3,13 @@ package common;
 import java.io.Serializable;
 
 public class Mensagem implements Serializable{
-    public Object mensagem;
+    public Object conteudo;
     public int player;
+    public String titulo;
     
-    public Mensagem(int player,Object mensagem){
+    public Mensagem(int player,String titulo,Object conteudo){
         this.player = player;
-        this.mensagem = mensagem;
+        this.titulo = titulo;
+        this.conteudo = conteudo;
     }
 }
