@@ -69,6 +69,7 @@ public class Cliente{
                 String jg = (int)conteudo == ordem ? jogo.jogador.nome: jogo.jogador_oponente.nome;
                 System.out.println("\n\nRodada "+jogo.rodada_atual+"\nVez de "+jg);
                 System.out.println("\nSua vida: "+jogo.jogador.personagem.vida+"\nVida do oponente: "+jogo.jogador_oponente.personagem.vida);
+                jogo.rodada_atual++;
                 break;
             case "Adicionar Oponente":
                     adicionarOponente((String[])conteudo);
