@@ -160,7 +160,13 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText("jCheckBox1");
+        jCheckBox1.setAutoscrolls(true);
+        jCheckBox1.setLabel(" Arco");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         Personagem.setEditable(false);
         Arma.setEditable(false);
@@ -186,7 +192,7 @@ public class TelaInicial extends javax.swing.JFrame {
                                     .addComponent(ANAO1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(34, 34, 34)
                                 .addComponent(jCheckBox1)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Arma, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -327,6 +333,10 @@ public class TelaInicial extends javax.swing.JFrame {
     private void ARCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ARCOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ARCOActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
