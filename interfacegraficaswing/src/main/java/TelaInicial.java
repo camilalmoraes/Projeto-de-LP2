@@ -24,15 +24,18 @@ public class TelaInicial extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         Armas = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Personagens = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         INICIAR = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        nome = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Personagem = new javax.swing.JTextField();
+        personagem = new javax.swing.JTextField();
         Arma = new javax.swing.JTextField();
         ELFO = new javax.swing.JButton();
         ANAO1 = new javax.swing.JButton();
@@ -40,9 +43,15 @@ public class TelaInicial extends javax.swing.JFrame {
         CAJADO = new javax.swing.JButton();
         ARCO = new javax.swing.JButton();
         ESPADA = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
 
         Armas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cajado", "Arco", "Espada" }));
+
+        Personagens.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(Personagens);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -63,11 +72,11 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(51, 102, 0));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        nome.setForeground(new java.awt.Color(51, 102, 0));
+        nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nomeActionPerformed(evt);
             }
         });
 
@@ -83,17 +92,26 @@ public class TelaInicial extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(51, 102, 0));
         jLabel5.setText("ARMA");
 
-        Personagem.setForeground(new java.awt.Color(51, 102, 0));
-        Personagem.addActionListener(new java.awt.event.ActionListener() {
+        personagem.setForeground(new java.awt.Color(51, 102, 0));
+        personagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PersonagemActionPerformed(evt);
+                personagemActionPerformed(evt);
             }
         });
 
         Arma.setForeground(new java.awt.Color(51, 102, 0));
+        Arma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ArmaActionPerformed(evt);
+            }
+        });
 
         ELFO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ELFO.setText("ELFO");
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ELFO, org.jdesktop.beansbinding.ELProperty.create("${action}"), ELFO, org.jdesktop.beansbinding.BeanProperty.create("selected"));
+        bindingGroup.addBinding(binding);
+
         ELFO.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 ELFOMousePressed(evt);
@@ -107,6 +125,10 @@ public class TelaInicial extends javax.swing.JFrame {
 
         ANAO1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ANAO1.setText("ANÃO");
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, ANAO1, org.jdesktop.beansbinding.ELProperty.create("${action}"), ANAO1, org.jdesktop.beansbinding.BeanProperty.create("selected"));
+        bindingGroup.addBinding(binding);
+
         ANAO1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 ANAO1MousePressed(evt);
@@ -160,15 +182,7 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setAutoscrolls(true);
-        jCheckBox1.setLabel(" Arco");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        Personagem.setEditable(false);
+        personagem.setEditable(false);
         Arma.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -180,19 +194,15 @@ public class TelaInicial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Personagem, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(personagem, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TROLL, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ELFO, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ANAO1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(34, 34, 34)
-                                .addComponent(jCheckBox1)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                            .addComponent(ELFO, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ANAO1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Arma, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,6 +216,10 @@ public class TelaInicial extends javax.swing.JFrame {
                             .addComponent(ESPADA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ARCO, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(74, 74, 74))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(187, Short.MAX_VALUE)
+                .addComponent(INICIAR, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(154, 154, 154))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -213,17 +227,11 @@ public class TelaInicial extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(208, 208, 208)
-                        .addComponent(jLabel3)))
-                .addContainerGap(94, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(INICIAR, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(154, 154, 154))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(139, 139, 139))))
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,16 +240,16 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Arma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Personagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(personagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -251,20 +259,18 @@ public class TelaInicial extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ESPADA))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ANAO1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ELFO))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(6, 6, 6)
+                        .addComponent(ANAO1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ELFO)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TROLL)))
-                .addGap(24, 24, 24)
+                .addGap(37, 37, 37)
                 .addComponent(INICIAR)
                 .addGap(44, 44, 44))
         );
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -274,9 +280,9 @@ public class TelaInicial extends javax.swing.JFrame {
         
     }//GEN-LAST:event_INICIARActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_nomeActionPerformed
 
     private void ELFOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ELFOActionPerformed
         // TODO add your handling code here:
@@ -287,27 +293,28 @@ public class TelaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CAJADOActionPerformed
 
-    private void PersonagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonagemActionPerformed
+    private void personagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personagemActionPerformed
         // TODO add your handling code here:
-        Personagem.setEditable(false);
+        personagem.setEditable(false);
 
         
-    }//GEN-LAST:event_PersonagemActionPerformed
+    }//GEN-LAST:event_personagemActionPerformed
 
     private void ANAO1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ANAO1MousePressed
         // TODO add your handling code here:
-        Personagem.setText("ANÃO");
+        personagem.setText("ANÃO");
+        
     }//GEN-LAST:event_ANAO1MousePressed
 
     private void ELFOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ELFOMousePressed
         // TODO add your handling code here:
-        Personagem.setText("ELFO");
+        personagem.setText("ELFO");
 
     }//GEN-LAST:event_ELFOMousePressed
 
     private void TROLLMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TROLLMousePressed
         // TODO add your handling code here:
-        Personagem.setText("TROLL");
+        personagem.setText("TROLL");
 
     }//GEN-LAST:event_TROLLMousePressed
 
@@ -334,9 +341,9 @@ public class TelaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ARCOActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void ArmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArmaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_ArmaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -383,13 +390,15 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JButton ELFO;
     private javax.swing.JButton ESPADA;
     private javax.swing.JButton INICIAR;
-    private javax.swing.JTextField Personagem;
+    private javax.swing.JList<String> Personagens;
     private javax.swing.JButton TROLL;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField nome;
+    private javax.swing.JTextField personagem;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
