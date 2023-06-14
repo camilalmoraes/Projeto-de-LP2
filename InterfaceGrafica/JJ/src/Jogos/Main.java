@@ -7,11 +7,11 @@ package Jogos;
 
 
 public class Main {
-    Jogo jogo = new Jogo();
+    //Jogo jogo = new Jogo();
     
-    PaginaInicial inicio = new PaginaInicial;
+    //PaginaInicial inicio = new PaginaInicial;
     
-    Vencedor vencedor = new Vencedor;
+    //Vencedor vencedor = new Vencedor;
     
     
 }
