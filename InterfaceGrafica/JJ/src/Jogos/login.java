@@ -259,6 +259,7 @@ public class login extends javax.swing.JFrame {
 
     private void ELFOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ELFOActionPerformed
         // TODO add your handling code here:
+        personagem.setText("Elfo");
     }//GEN-LAST:event_ELFOActionPerformed
 
     private void ANAO1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ANAO1MousePressed
@@ -267,6 +268,7 @@ public class login extends javax.swing.JFrame {
 
     private void ANAO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANAO1ActionPerformed
         // TODO add your handling code here:
+        personagem.setText("Anão");
     }//GEN-LAST:event_ANAO1ActionPerformed
 
     private void TROLLMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TROLLMousePressed
@@ -275,6 +277,7 @@ public class login extends javax.swing.JFrame {
 
     private void TROLLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TROLLActionPerformed
         // TODO add your handling code here:
+        personagem.setText("Anão");
     }//GEN-LAST:event_TROLLActionPerformed
 
     private void ARCOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ARCOMousePressed
@@ -283,6 +286,7 @@ public class login extends javax.swing.JFrame {
 
     private void ARCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ARCOActionPerformed
         // TODO add your handling code here:
+        Arma.setText("Arco");
     }//GEN-LAST:event_ARCOActionPerformed
 
     private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed
@@ -291,6 +295,7 @@ public class login extends javax.swing.JFrame {
 
     private void CAJADOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CAJADOMousePressed
         // TODO add your handling code here:
+        Arma.setText("Cajado");
     }//GEN-LAST:event_CAJADOMousePressed
 
     private void CAJADOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CAJADOActionPerformed
@@ -299,6 +304,7 @@ public class login extends javax.swing.JFrame {
 
     private void ESPADAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ESPADAMousePressed
         // TODO add your handling code here:
+        Arma.setText("Espada");
     }//GEN-LAST:event_ESPADAMousePressed
 
     /**
