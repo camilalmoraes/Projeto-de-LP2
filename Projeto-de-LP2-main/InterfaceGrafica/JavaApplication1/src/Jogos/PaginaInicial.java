@@ -1,19 +1,22 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Jogos;
 
+import javax.swing.ImageIcon;
+
 /**
  *
- * @author augusto
+ * @author aluno
  */
-public class login extends javax.swing.JFrame {
+public class PaginaInicial extends javax.swing.JFrame {
 
     /**
-     * Creates new form login
+     * Creates new form PaginaInicial
      */
-    public login() {
+    public PaginaInicial() {
         initComponents();
     }
 
@@ -26,22 +29,82 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Arma = new javax.swing.JTextField();
-        ELFO = new javax.swing.JButton();
-        ANAO1 = new javax.swing.JButton();
         INICIAR = new javax.swing.JButton();
-        TROLL = new javax.swing.JButton();
         ARCO = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         nome = new javax.swing.JTextField();
-        CAJADO = new javax.swing.JButton();
         ESPADA = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         personagem = new javax.swing.JTextField();
+        Arma = new javax.swing.JTextField();
+        ELFO = new javax.swing.JButton();
+        ANAO1 = new javax.swing.JButton();
+        TROLL = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        CAJADO = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 153));
+
+        INICIAR.setBackground(new java.awt.Color(153, 255, 51));
+        INICIAR.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        INICIAR.setForeground(new java.awt.Color(51, 102, 0));
+        INICIAR.setText("INICIAR JOGO");
+        INICIAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                INICIARActionPerformed(evt);
+            }
+        });
+
+        ARCO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ARCO.setText("ARCO");
+        ARCO.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ARCOMousePressed(evt);
+            }
+        });
+        ARCO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ARCOActionPerformed(evt);
+            }
+        });
+
+        nome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        nome.setForeground(new java.awt.Color(51, 102, 0));
+        nome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeActionPerformed(evt);
+            }
+        });
+
+        ESPADA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ESPADA.setText("ESPADA");
+        ESPADA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ESPADAMousePressed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 102, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("NOME");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 102, 0));
+        jLabel4.setText("PERSONAGEM");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 102, 0));
+        jLabel5.setText("ARMA");
+
+        personagem.setForeground(new java.awt.Color(51, 102, 0));
+        personagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personagemActionPerformed(evt);
+            }
+        });
 
         Arma.setForeground(new java.awt.Color(51, 102, 0));
         Arma.addActionListener(new java.awt.event.ActionListener() {
@@ -78,16 +141,6 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        INICIAR.setBackground(new java.awt.Color(153, 255, 51));
-        INICIAR.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        INICIAR.setForeground(new java.awt.Color(51, 102, 0));
-        INICIAR.setText("INICIAR JOGO");
-        INICIAR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                INICIARActionPerformed(evt);
-            }
-        });
-
         TROLL.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         TROLL.setText("TROLL");
         TROLL.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,33 +154,12 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        ARCO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ARCO.setText("ARCO");
-        ARCO.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                ARCOMousePressed(evt);
-            }
-        });
-        ARCO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ARCOActionPerformed(evt);
-            }
-        });
-
         jLabel1.setBackground(new java.awt.Color(204, 204, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("JOGO DE TURNOS");
         jLabel1.setAlignmentY(0.0F);
-
-        nome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nome.setForeground(new java.awt.Color(51, 102, 0));
-        nome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeActionPerformed(evt);
-            }
-        });
 
         CAJADO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         CAJADO.setText("CAJADO");
@@ -142,82 +174,54 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        ESPADA.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ESPADA.setText("ESPADA");
-        ESPADA.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                ESPADAMousePressed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 102, 0));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("NOME");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 102, 0));
-        jLabel4.setText("PERSONAGEM");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 102, 0));
-        jLabel5.setText("ARMA");
-
-        personagem.setForeground(new java.awt.Color(51, 102, 0));
-        personagem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                personagemActionPerformed(evt);
-            }
-        });
-
-        Arma.setEditable(false);
         personagem.setEditable(false);
+        Arma.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(INICIAR, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(247, 247, 247))
             .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addGap(180, 180, 180)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
+                        .addGap(199, 199, 199)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(147, 147, 147)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(ANAO1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(ELFO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(TROLL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(personagem, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(personagem)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(140, 140, 140)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(ARCO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(CAJADO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ESPADA, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(CAJADO, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                                        .addComponent(ESPADA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(Arma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(169, 169, 169)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(113, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(INICIAR, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(217, 217, 217))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -239,52 +243,22 @@ public class login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ELFO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CAJADO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TROLL, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ESPADA, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addGap(38, 38, 38)
                 .addComponent(INICIAR)
-                .addGap(155, 155, 155))
+                .addGap(158, 158, 158))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ArmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArmaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ArmaActionPerformed
-
-    private void ELFOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ELFOMousePressed
-        // TODO add your handling code here:
-        personagem.setText("ELFO");
-    }//GEN-LAST:event_ELFOMousePressed
-
-    private void ELFOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ELFOActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ELFOActionPerformed
-
-    private void ANAO1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ANAO1MousePressed
-        // TODO add your handling code here:
-        personagem.setText("ANÃƒO");
-    }//GEN-LAST:event_ANAO1MousePressed
-
-    private void ANAO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANAO1ActionPerformed
-
-    }//GEN-LAST:event_ANAO1ActionPerformed
-
     private void INICIARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INICIARActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_INICIARActionPerformed
-
-    private void TROLLMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TROLLMousePressed
-        // TODO add your handling code here:
-        personagem.setText("TROLL");
-    }//GEN-LAST:event_TROLLMousePressed
-
-    private void TROLLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TROLLActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TROLLActionPerformed
 
     private void ARCOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ARCOMousePressed
         // TODO add your handling code here:
@@ -299,6 +273,40 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeActionPerformed
 
+    private void ESPADAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ESPADAMousePressed
+        // TODO add your handling code here:
+        Arma.setText("ESPADA");
+    }//GEN-LAST:event_ESPADAMousePressed
+
+    private void personagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personagemActionPerformed
+        // TODO add your handling code here:
+        personagem.setEditable(false);
+
+    }//GEN-LAST:event_personagemActionPerformed
+
+    private void ArmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArmaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ArmaActionPerformed
+
+    private void ELFOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ELFOMousePressed
+        // TODO add your handling code here:
+        personagem.setText("ELFO");
+    }//GEN-LAST:event_ELFOMousePressed
+
+    private void ELFOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ELFOActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_ELFOActionPerformed
+
+    private void TROLLMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TROLLMousePressed
+        // TODO add your handling code here:
+        personagem.setText("TROLL");
+    }//GEN-LAST:event_TROLLMousePressed
+
+    private void TROLLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TROLLActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TROLLActionPerformed
+
     private void CAJADOMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CAJADOMousePressed
         // TODO add your handling code here:
         Arma.setText("CAJADO");
@@ -308,15 +316,14 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CAJADOActionPerformed
 
-    private void ESPADAMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ESPADAMousePressed
+    private void ANAO1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ANAO1MousePressed
         // TODO add your handling code here:
-        Arma.setText("ESPADA");
-    }//GEN-LAST:event_ESPADAMousePressed
+        personagem.setText("ANÃO");
+    }//GEN-LAST:event_ANAO1MousePressed
 
-    private void personagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personagemActionPerformed
-        // TODO add your handling code here:
-        personagem.setEditable(false);
-    }//GEN-LAST:event_personagemActionPerformed
+    private void ANAO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANAO1ActionPerformed
+      
+    }//GEN-LAST:event_ANAO1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,20 +342,20 @@ public class login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PaginaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PaginaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PaginaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PaginaInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new PaginaInicial().setVisible(true);
             }
         });
     }
