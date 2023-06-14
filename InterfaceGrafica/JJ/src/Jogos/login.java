@@ -43,6 +43,7 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Arma.setEditable(false);
         Arma.setForeground(new java.awt.Color(51, 102, 0));
         Arma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +164,7 @@ public class login extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(51, 102, 0));
         jLabel5.setText("ARMA");
 
+        personagem.setEditable(false);
         personagem.setForeground(new java.awt.Color(51, 102, 0));
         personagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
