@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Jogos;
 
-/**
- *
- * @author aluno
- */
 public class PaginaInicial extends javax.swing.JFrame {
 
     /**
@@ -127,6 +119,11 @@ public class PaginaInicial extends javax.swing.JFrame {
         ANAO1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 ANAO1MousePressed(evt);
+            }
+        });
+        ANAO1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ANAO1ActionPerformed(evt);
             }
         });
 
@@ -321,6 +318,11 @@ public class PaginaInicial extends javax.swing.JFrame {
     private void CAJADOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CAJADOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CAJADOActionPerformed
+
+    private void ANAO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANAO1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ANAO1ActionPerformed
 
     /**
      * @param args the command line arguments

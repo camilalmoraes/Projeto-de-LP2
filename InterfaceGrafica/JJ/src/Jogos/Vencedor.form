@@ -25,12 +25,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-              <Component id="vencedor" min="-2" pref="201" max="-2" attributes="0"/>
+              <Component id="telavencedor" min="-2" pref="201" max="-2" attributes="0"/>
               <EmptySpace pref="93" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="182" max="-2" attributes="0"/>
+              <Component id="nomeVencedor" min="-2" pref="182" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -39,16 +39,16 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="150" max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="nomeVencedor" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="vencedor" min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="telavencedor" min="-2" pref="42" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="vencedor">
+    <Component class="javax.swing.JLabel" name="telavencedor">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="36" style="1"/>
@@ -56,7 +56,7 @@
         <Property name="text" type="java.lang.String" value="Voc&#xea; venceu"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="nomeVencedor">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="36" style="1"/>

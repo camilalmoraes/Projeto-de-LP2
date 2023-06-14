@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Jogos;
 
-/**
- *
- * @author aluno
- */
 public class Jogo extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Jogo
      */
@@ -39,6 +31,16 @@ public class Jogo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         ataque1.setText("jButton1");
+        ataque1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ataque1MouseClicked(evt);
+            }
+        });
+        ataque1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ataque1ActionPerformed(evt);
+            }
+        });
 
         ataque2.setText("jButton2");
         ataque2.addActionListener(new java.awt.event.ActionListener() {
@@ -48,6 +50,11 @@ public class Jogo extends javax.swing.JFrame {
         });
 
         ataque3.setText("jButton3");
+        ataque3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ataque3ActionPerformed(evt);
+            }
+        });
 
         ataque4.setText("jButton4");
         ataque4.addActionListener(new java.awt.event.ActionListener() {
@@ -127,9 +134,18 @@ public class Jogo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ataque4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void ataque1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ataque1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ataque1ActionPerformed
+
+    private void ataque3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ataque3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ataque3ActionPerformed
+
+    private void ataque1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ataque1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ataque1MouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
