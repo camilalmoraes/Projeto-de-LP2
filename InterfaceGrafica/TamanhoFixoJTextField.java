@@ -2,7 +2,12 @@ import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
 
-public class TamanhoFixoJTextField extends PlainDocument {
+public class Teste{
+    public static void main (String[] args){
+        new Iniciar();
+    }
+}
+/*public class TamanhoFixoJTextField extends PlainDocument {
 
        private int tamMax;
 
@@ -31,4 +36,4 @@ public class TamanhoFixoJTextField extends PlainDocument {
             super.insertString(offset, str, attr);
         }
 
-}
+}*/
